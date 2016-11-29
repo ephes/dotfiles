@@ -9,3 +9,5 @@ set expandtab
 syntax on
 set background=dark
 
+" encrypted files
+set cm=blowfish2
