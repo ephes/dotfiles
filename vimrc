@@ -4,3 +4,8 @@ filetype plugin indent on
 set tabstop=4
 set shiftwidth=4
 set expandtab
+
+" enable syntax highlighting
+syntax on
+set background=dark
+
