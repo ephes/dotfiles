@@ -42,3 +42,6 @@ then
 else
     alias ls='ls --color=auto'
 fi
+
+# paths
+export PATH=/home/jochen/miniconda3/bin:$PATH
