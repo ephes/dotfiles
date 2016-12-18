@@ -35,13 +35,13 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
 # aliases
 UNAME=$(uname)
-echo $UNAME
 if [[ $UNAME=='Darwin' ]];
 then
     alias ls='ls -G'
+    alias vim='/usr/local/bin/vim'
 else
     alias ls='ls --color=auto'
 fi
 
 # paths
-export PATH=/home/jochen/miniconda3/bin:$PATH
+export PATH=${HOME}/miniconda3/bin:$PATH
