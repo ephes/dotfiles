@@ -10,6 +10,7 @@
     ~/.zshrc: zshrc
     ~/.vimrc: vimrc
     ~/.babelrc: babelrc
+    ~/.keras/keras.json: keras.json
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
