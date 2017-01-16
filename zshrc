@@ -2,7 +2,7 @@
 
 autoload -Uz promptinit
 promptinit
-prompt adam2
+prompt off
 
 setopt histignorealldups sharehistory
 
@@ -20,7 +20,6 @@ zstyle ':completion:*' completer _expand _complete _correct _approximate
 zstyle ':completion:*' format 'Completing %d'
 zstyle ':completion:*' group-name ''
 zstyle ':completion:*' menu select=2
-eval "$(dircolors -b)"
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 zstyle ':completion:*' list-colors ''
 zstyle ':completion:*' list-prompt %SAt %p: Hit TAB for more, or the character to insert%s
@@ -40,6 +39,7 @@ then
     alias ls='ls -G'
     alias vim='/usr/local/bin/vim'
 else
+    eval "$(dircolors -b)"
     alias ls='ls --color=auto'
 fi
 
