@@ -1,6 +1,6 @@
 {
-    "image_dim_ordering": "tf",
-    "epsilon": 1e-07,
+    "backend": "tensorflow",
     "floatx": "float32",
-    "backend": "tensorflow"
+    "epsilon": 1e-07,
+    "image_dim_ordering": "tf"
 }
