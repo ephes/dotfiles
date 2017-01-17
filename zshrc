@@ -46,6 +46,10 @@ then
 else
     eval "$(dircolors -b)"
     alias ls='ls --color=auto'
+
+    # virtualenv
+    source ~/.local/bin/virtualenvwrapper.sh
+    export WORKON_HOME=~/.virtualenvs
 fi
 
 # paths
