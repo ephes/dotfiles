@@ -32,16 +32,17 @@ zstyle ':completion:*' verbose true
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
-# virtualenv
-source /usr/local/bin/virtualenvwrapper.sh
-export WORKON_HOME=~/.virtualenvs
-
 # aliases
 UNAME=$(uname)
-if [[ $UNAME=='Darwin' ]];
+if [ "$UNAME" = 'Darwin' ];
 then
+    # aliases
     alias ls='ls -G'
     alias vim='/usr/local/bin/vim'
+
+    # virtualenv
+    source /usr/local/bin/virtualenvwrapper.sh
+    export WORKON_HOME=~/.virtualenvs
 else
     eval "$(dircolors -b)"
     alias ls='ls --color=auto'
