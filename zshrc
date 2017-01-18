@@ -32,10 +32,19 @@ zstyle ':completion:*' verbose true
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
+# paths
+export PATH=${HOME}/miniconda3/bin:$PATH
+
 # aliases
+alias sa='source activate'
+alias sd='source deactivate'
+
+# platform specific stuff
 UNAME=$(uname)
 if [ "$UNAME" = 'Darwin' ];
 then
+    # machine runs MacOS
+
     # aliases
     alias ls='ls -G'
     alias vim='/usr/local/bin/vim'
@@ -44,6 +53,9 @@ then
     source /usr/local/bin/virtualenvwrapper.sh
     export WORKON_HOME=~/.virtualenvs
 else
+    # machine runs Linux
+
+    # aliases
     eval "$(dircolors -b)"
     alias ls='ls --color=auto'
 
@@ -51,6 +63,3 @@ else
     source ~/.local/bin/virtualenvwrapper.sh
     export WORKON_HOME=~/.virtualenvs
 fi
-
-# paths
-export PATH=${HOME}/miniconda3/bin:$PATH
