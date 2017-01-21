@@ -35,6 +35,15 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 # paths
 export PATH=${HOME}/miniconda3/bin:$PATH
 
+# make zsh escape backspace work like in bash (kill only to the next
+# backslash, not the whole path)
+backward-kill-dir () {
+    local WORDCHARS=${WORDCHARS/\/}
+    zle backward-kill-word
+}
+zle -N backward-kill-dir
+bindkey '^[^?' backward-kill-dir
+
 # aliases
 alias sa='source activate'
 alias sd='source deactivate'
