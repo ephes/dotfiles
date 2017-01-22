@@ -12,6 +12,8 @@
     ~/.babelrc: babelrc
     ~/.keras/keras.json: keras.json
     ~/.config/nvim/init.vim: nvimrc
+    ~/.config/nvim/plugins.vim: nvim_plugins
+    ~/.config/nvim/general.vim: nvim_general
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]

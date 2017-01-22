@@ -1,0 +1,33 @@
+"dein plugin manager
+"dein Scripts-----------------------------
+"
+if &compatible
+  set nocompatible               " Be iMproved
+endif
+
+" Required:
+set runtimepath+=/Users/jochen/.vim/bundles/repos/github.com/Shougo/dein.vim
+
+" Required:
+if dein#load_state('/Users/jochen/.vim/bundles')
+  call dein#begin('/Users/jochen/.vim/bundles')
+
+  " Let dein manage dein
+  " Required:
+  call dein#add('/Users/jochen/.vim/bundles/repos/github.com/Shougo/dein.vim')
+
+  " Add or remove your plugins here:
+  call dein#add('Shougo/neosnippet.vim')
+  call dein#add('Shougo/neosnippet-snippets')
+  call dein#add('Shougo/deoplete.nvim')
+
+  " You can specify revision/branch/tag.
+  call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
+
+  " Required:
+  call dein#end()
+  call dein#save_state()
+endif
+
+" activate deoplete at startup
+let g:deoplete#enable_at_startup = 1
