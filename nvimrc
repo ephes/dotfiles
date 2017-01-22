@@ -9,9 +9,6 @@ set expandtab
 syntax on
 set background=dark
 
-" encrypted files
-set cm=blowfish2
-
 " set/unset paste mode with <F2>
 set pastetoggle=<F2>
 
