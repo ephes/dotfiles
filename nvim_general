@@ -1,14 +1,3 @@
-" Required:
-filetype plugin indent on
-syntax enable
-
-" If you want to install not installed plugins on startup.
-"if dein#check_install()
-"  call dein#install()
-"endif
-
-"End dein Scripts-------------------------
-
 " make vim use 4 spaces instead of tabs
 set tabstop=4
 set shiftwidth=4
@@ -19,3 +8,14 @@ set background=dark
 
 " get copy/paste to work with neovim
 set mouse=v
+
+" deoplete tab-complete
+inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+
+" specify where to find the python interpreter
+let g:python_host_prog = '/usr/local/bin/python'
+let g:python3_host_prog = '/usr/local/bin/python3'
+
+" python completion
+autocmd FileType python nnoremap <leader>y :0,$!yapf<Cr>
+autocmd CompleteDone * pclose " To close preview window of deoplete automagically

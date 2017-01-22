@@ -29,5 +29,16 @@ if dein#load_state('/Users/jochen/.vim/bundles')
   call dein#save_state()
 endif
 
+" Required:
+filetype plugin indent on
+syntax enable
+
+" If you want to install not installed plugins on startup.
+if dein#check_install()
+  call dein#install()
+endif
+
+"End dein Scripts-------------------------
+
 " activate deoplete at startup
 let g:deoplete#enable_at_startup = 1
