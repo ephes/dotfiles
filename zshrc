@@ -62,6 +62,7 @@ then
     alias vim='/usr/local/bin/vim'
 
     # virtualenv
+    VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
     source /usr/local/bin/virtualenvwrapper.sh
     export WORKON_HOME=~/.virtualenvs
 else
@@ -72,6 +73,7 @@ else
     alias ls='ls --color=auto'
 
     # virtualenv
+    VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
     source ~/.local/bin/virtualenvwrapper.sh
     export WORKON_HOME=~/.virtualenvs
 fi
