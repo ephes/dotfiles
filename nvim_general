@@ -13,8 +13,15 @@ set mouse=v
 inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 
 " specify where to find the python interpreter
-let g:python_host_prog = '/usr/local/bin/python'
-let g:python3_host_prog = '/usr/local/bin/python3'
+if filereadable("/usr/local/bin/python3")
+    " echo "mac os"
+    let g:python_host_prog = '/usr/local/bin/python'
+    let g:python3_host_prog = '/usr/local/bin/python3'
+else
+    " echo "linux"
+    let g:python_host_prog = '/usr/bin/python'
+    let g:python3_host_prog = '/usr/bin/python3'
+endif
 
 " python completion
 autocmd FileType python nnoremap <leader>y :0,$!yapf<Cr>
