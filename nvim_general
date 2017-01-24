@@ -26,3 +26,6 @@ endif
 " python completion
 autocmd FileType python nnoremap <leader>y :0,$!yapf<Cr>
 autocmd CompleteDone * pclose " To close preview window of deoplete automagically
+
+" mark 80 char col
+set colorcolumn=80
