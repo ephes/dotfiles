@@ -77,3 +77,7 @@ else
     source ~/.local/bin/virtualenvwrapper.sh
     export WORKON_HOME=~/.virtualenvs
 fi
+
+unsetopt share_history
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
