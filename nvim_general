@@ -20,6 +20,6 @@ let g:python_host_prog = $HOME.'/.virtualenvs/neovim2/bin/python'
 autocmd FileType python nnoremap <leader>y :0,$!yapf<Cr>
 autocmd CompleteDone * pclose " To close preview window of deoplete automagically
 
-" mark 80 char col
+" mark 120 char col
 highlight ColorColumn ctermbg=8
-set colorcolumn=80
+set colorcolumn=120
