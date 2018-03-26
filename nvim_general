@@ -23,3 +23,6 @@ autocmd CompleteDone * pclose " To close preview window of deoplete automagicall
 " mark 120 char col
 highlight ColorColumn ctermbg=8
 set colorcolumn=120
+
+" deoplete completion
+let g:deoplete#enable_at_startup = 1
