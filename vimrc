@@ -5,6 +5,9 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 
+" overwrite tabstop=8 setting from python.vim
+autocmd FileType python setlocal tabstop=4
+
 " enable syntax highlighting
 syntax on
 set background=dark
