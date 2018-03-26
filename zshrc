@@ -65,6 +65,11 @@ then
     VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
     source /usr/local/bin/virtualenvwrapper.sh
     export WORKON_HOME=~/.virtualenvs
+
+    # postgres start stop
+    alias pg-start="launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist"
+    alias pg-stop="launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist"
+
 else
     # machine runs Linux
 
@@ -81,3 +86,9 @@ fi
 unsetopt share_history
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/jochen/Downloads/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/jochen/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/jochen/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/jochen/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
