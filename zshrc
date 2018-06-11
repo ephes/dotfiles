@@ -36,7 +36,7 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 zstyle ':completion:*' special-dirs true
 
 # paths
-export PATH=${HOME}/miniconda3/bin:$PATH
+. ${HOME}/miniconda3/etc/profile.d/conda.sh
 
 # make zsh escape backspace work like in bash (kill only to the next
 # backslash, not the whole path)
