@@ -43,6 +43,12 @@ Plugin 'shougo/deoplete.nvim'
 " black
 Plugin 'ambv/black'
 
+" make vim indent only 4 spaces instead of 8
+" Plugin 'Vimjas/vim-python-pep8-indent'
+
+" javascript indent
+Plugin 'pangloss/vim-javascript'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -85,3 +91,6 @@ set encoding=utf-8
 
 " deoplete
 let g:deoplete#enable_at_startup = 1
+
+" javascript indent
+autocmd FileType javascript set tabstop=2|set shiftwidth=2|set expandtab
