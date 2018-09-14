@@ -73,7 +73,12 @@ set shiftwidth=4
 set expandtab
 
 " overwrite tabstop=8 setting from python.vim
-autocmd FileType python setlocal tabstop=4
+autocmd FileType python setlocal ts=4 sts=4 sw=4 expandtab
+
+" other languages
+autocmd FileType javascript setlocal ts=2 sw=2 sts=2
+autocmd FileType typescript setlocal ts=2 sw=2 sts=2
+autocmd FileType html setlocal ts=2 sw=2 sts=2
 
 " enable syntax highlighting
 syntax on
