@@ -36,9 +36,9 @@ Plugin 'ervandew/supertab'
 Plugin 'Valloric/YouCompleteMe'
 
 " deoplete
-Plugin 'roxma/vim-hug-neovim-rpc'
-Plugin 'roxma/nvim-yarp'
-Plugin 'shougo/deoplete.nvim'
+"Plugin 'roxma/vim-hug-neovim-rpc'
+"Plugin 'roxma/nvim-yarp'
+"Plugin 'shougo/deoplete.nvim'
 
 " black
 Plugin 'ambv/black'
