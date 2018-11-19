@@ -15,6 +15,7 @@
     ~/.config/nvim/plugins.vim: nvim_plugins
     ~/.config/nvim/general.vim: nvim_general
     ~/.imwheelrc: imwheelrc
+    ~/.gitconfig: gitconfig
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]

@@ -1,0 +1,9 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+	name = Jochen Wersdörfer
+	email = jochen@wersdoerfer.de
+[alias]
+	up = pull --rebase --autostash
+[core]
+	editor = /usr/local/bin/vim
