@@ -102,3 +102,6 @@ let g:deoplete#enable_at_startup = 1
 
 " javascript indent
 autocmd FileType javascript set tabstop=2|set shiftwidth=2|set expandtab
+
+" disable folding - ultra annoying when editing rst files
+set nofoldenable
