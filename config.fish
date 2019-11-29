@@ -6,7 +6,7 @@ status --is-interactive; and source (pyenv virtualenv-init -|psub)
 set PATH $PATH /Users/jochen/.local/bin
 
 # pipx completions
-register-python-argcomplete --shell fish pipx | .
+# register-python-argcomplete --shell fish pipx | .
 set -g fish_user_paths "/usr/local/opt/icu4c/bin" $fish_user_paths
 set -g fish_user_paths "/usr/local/opt/icu4c/sbin" $fish_user_paths
 
@@ -22,3 +22,6 @@ function load_env --on-variable PWD
     export (grep -Ev '^\s*$|^\s*\#' .env)
   end
 end
+
+# autocompletion is slow in catalina
+function __fish_describe_command; end
