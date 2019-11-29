@@ -41,7 +41,7 @@ Plugin 'Valloric/YouCompleteMe'
 "Plugin 'shougo/deoplete.nvim'
 
 " black
-Plugin 'ambv/black'
+Plugin 'psf/black'
 
 " make vim indent only 4 spaces instead of 8
 " Plugin 'Vimjas/vim-python-pep8-indent'
@@ -92,6 +92,12 @@ set pastetoggle=<F2>
 
 " jedi
 let g:jedi#auto_initialization = 1
+
+" command-T
+let g:CommandTMaxFiles=200000
+
+" black
+nnoremap <F9> :Black<CR>
 
 " youcompleteme
 let g:ycm_python_binary_path = '/usr/local/bin/python3'
