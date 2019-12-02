@@ -25,6 +25,14 @@ function load_env --on-variable PWD
   end
 end
 
+# on pwd change look for conda environment.yml and activate conda env
+function activate_conda_env --on-variable PWD
+  if test -e environment.yml
+    pyenv activate (pyenv virtualenvs | grep miniconda | cut -d " " -f 3)
+    conda activate (grep name environment.yml | cut -d " " -f 2)
+  end
+end
+
 # autocompletion is slow in catalina
 function __fish_describe_command; end
 
