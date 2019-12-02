@@ -13,8 +13,10 @@ set -g fish_user_paths "/usr/local/opt/icu4c/sbin" $fish_user_paths
 # header files for gcc from apple command line tools
 set -x CPATH $CPATH (xcrun --show-sdk-path)/usr/include
 
-# headers for openssl
-set -x LDFLAGS $LDFLAGS "-I/usr/local/opt/openssl/include -L/usr/local/opt/openssl/lib"
+# enable compiling against homebrew openssl
+set -gx LDFLAGS "-L/usr/local/opt/openssl@1.1/lib"
+set -gx CPPFLAGS "-I/usr/local/opt/openssl@1.1/include"
+set -gx PKG_CONFIG_PATH "/usr/local/opt/openssl@1.1/lib/pkgconfig"
 
 # on pwd change look for env file and load it
 function load_env --on-variable PWD
@@ -25,3 +27,6 @@ end
 
 # autocompletion is slow in catalina
 function __fish_describe_command; end
+
+# iTerm2 shell integration
+source ~/.iterm2_shell_integration.(basename $SHELL)

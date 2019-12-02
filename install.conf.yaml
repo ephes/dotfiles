@@ -17,6 +17,7 @@
     ~/.imwheelrc: imwheelrc
     ~/.gitconfig: gitconfig
     ~/.config/fish/config.fish: config.fish
+    ~/.iterm2_shell_integration.fish: iterm2_shell_integration.fish
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
