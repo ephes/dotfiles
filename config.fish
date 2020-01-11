@@ -40,3 +40,7 @@ set -gx PYENV_ROOT $HOME/.pyenv
 set -gx PATH $PYENV_ROOT/bin $PATH
 status --is-interactive; and source (pyenv init -|psub)
 # status --is-interactive; and source (pyenv virtualenv-init -|psub)
+
+# git autocompletion issues https://github.com/pyenv/pyenv/issues/688
+# needs to be afte pyenv path modifications
+set -gx PATH /usr/local/opt/gettext/bin $PATH
