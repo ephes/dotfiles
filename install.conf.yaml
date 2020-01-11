@@ -17,6 +17,9 @@
     ~/.imwheelrc: imwheelrc
     ~/.gitconfig: gitconfig
     ~/.config/fish/config.fish: config.fish
+    ~/.config/fish/fish_variables: fish_variables
+    ~/.config/fish/functions/fish_prompt.fish: fish_prompt.fish
+    ~/.config/fish/functions/init_django_db.fish: init_django_db.fish
     ~/.iterm2_shell_integration.fish: iterm2_shell_integration.fish
 
 - shell:

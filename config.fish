@@ -38,14 +38,3 @@ function __fish_describe_command; end
 
 # iTerm2 shell integration
 source ~/.iterm2_shell_integration.(basename $SHELL)
-
-# recreate django database
-function init_django_db
-  set user $argv[1]
-  set dbname $argv[2]
-  dropdb $dbname
-  dropuser $user
-  createdb $dbname
-  createuser $user
-  psql -d $dbname -c "GRANT ALL PRIVILEGES ON DATABASE $dbname to $user;"
-end
