@@ -1,7 +1,3 @@
-# pyenv virtualenvs
-status --is-interactive; and source (pyenv init -|psub)
-status --is-interactive; and source (pyenv virtualenv-init -|psub)
-
 # Created by `userpath` on 2019-11-27 06:20:04
 set PATH $PATH /Users/jochen/.local/bin
 
@@ -38,3 +34,9 @@ function __fish_describe_command; end
 
 # iTerm2 shell integration
 source ~/.iterm2_shell_integration.(basename $SHELL)
+
+# pyenv / pyenv-virtualenv
+set -gx PYENV_ROOT $HOME/.pyenv
+set -gx PATH $PYENV_ROOT/bin $PATH
+status --is-interactive; and source (pyenv init -|psub)
+# status --is-interactive; and source (pyenv virtualenv-init -|psub)
