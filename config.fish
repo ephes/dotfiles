@@ -44,3 +44,10 @@ status --is-interactive; and source (pyenv init -|psub)
 # git autocompletion issues https://github.com/pyenv/pyenv/issues/688
 # needs to be afte pyenv path modifications
 set -gx PATH /usr/local/opt/gettext/bin $PATH
+
+# aliases
+alias tests "poetry run test --pytest"
+alias dshell "poetry run shell"
+alias flake "poetry run flake8"
+alias docs "poetry run docs"
+alias coverage "poetry run coverage"
