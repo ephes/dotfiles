@@ -46,7 +46,8 @@ status --is-interactive; and source (pyenv init -|psub)
 set -gx PATH /usr/local/opt/gettext/bin $PATH
 
 # aliases
-alias tests "poetry run test --pytest"
+alias tests "poetry run pytest"
+alias unittests "poetry run test"
 alias dshell "poetry run shell"
 alias flake "poetry run flake8"
 alias docs "poetry run docs"
