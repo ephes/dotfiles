@@ -45,6 +45,10 @@ status --is-interactive; and source (pyenv init -|psub)
 # needs to be afte pyenv path modifications
 set -gx PATH /usr/local/opt/gettext/bin $PATH
 
+# fzf
+set -gx FZF_DEFAULT_COMMAND "fd --type f"
+set -gx FZF_DEFAULT_OPTS "-layout=reverse --inline-info"
+
 # aliases
 alias tests "poetry run pytest"
 alias unittests "poetry run test"
