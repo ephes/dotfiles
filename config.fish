@@ -47,7 +47,7 @@ set -gx PATH /usr/local/opt/gettext/bin $PATH
 
 # fzf
 set -gx FZF_DEFAULT_COMMAND "fd --type f"
-set -gx FZF_DEFAULT_OPTS "-layout=reverse --inline-info"
+set -gx FZF_DEFAULT_OPTS "--layout=reverse --inline-info"
 
 # aliases
 alias tests "poetry run pytest"
