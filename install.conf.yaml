@@ -21,6 +21,7 @@
     ~/.config/fish/functions/fish_prompt.fish: fish_prompt.fish
     ~/.config/fish/functions/init_django_db.fish: init_django_db.fish
     ~/.config/fish/functions/fish_user_key_bindings.fish: fish_user_key_bindings.fish
+    ~/.config/fish/completions/poetry.fish: poetry.fish
     ~/.iterm2_shell_integration.fish: iterm2_shell_integration.fish
 
 - shell:

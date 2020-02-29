@@ -41,6 +41,9 @@ set -gx PATH $PYENV_ROOT/bin $PATH
 status --is-interactive; and source (pyenv init -|psub)
 # status --is-interactive; and source (pyenv virtualenv-init -|psub)
 
+# enable framework for python via pyenv needed for you complete me
+set -gx PYTHON_CONFIGURE_OPTS "--enable-framework"
+
 # git autocompletion issues https://github.com/pyenv/pyenv/issues/688
 # needs to be afte pyenv path modifications
 set -gx PATH /usr/local/opt/gettext/bin $PATH
@@ -50,10 +53,11 @@ set -gx FZF_DEFAULT_COMMAND "fd --type f"
 set -gx FZF_DEFAULT_OPTS "--layout=reverse --inline-info"
 
 # aliases
-alias tests "poetry run pytest"
+alias tests "poetry run test"
 alias unittests "poetry run test"
 alias dshell "poetry run shell"
-alias flake "poetry run flake8"
+alias lint "poetry run lint"
 alias docs "poetry run docs"
-alias coverage "poetry run coverage"
+alias show_coverage "poetry run show_coverage"
 alias fvim "vim (fzf)"
+
