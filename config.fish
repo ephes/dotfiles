@@ -54,7 +54,7 @@ set -gx FZF_DEFAULT_OPTS "--layout=reverse --inline-info"
 
 # aliases
 alias tests "poetry run test"
-alias unittests "poetry run test"
+alias pytests "poetry run pytest"
 alias dshell "poetry run shell"
 alias lint "poetry run lint"
 alias docs "poetry run docs"
