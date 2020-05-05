@@ -97,6 +97,7 @@ let g:jedi#auto_initialization = 1
 let g:CommandTMaxFiles=200000
 
 " black
+let g:black_virtualenv = "~/.pyenv/versions/black"
 nnoremap <F9> :Black<CR>
 
 " youcompleteme
