@@ -53,8 +53,8 @@ set -gx FZF_DEFAULT_COMMAND "fd --type f"
 set -gx FZF_DEFAULT_OPTS "--layout=reverse --inline-info"
 
 # Use buildkit for docker-compose
-set -gx COMPOSE_DOCKER_CLI_BUILD=1
-set -gx DOCKER_BUILDKIT=1
+set -gx COMPOSE_DOCKER_CLI_BUILD 1
+set -gx DOCKER_BUILDKIT 1
 
 # aliases
 alias tests "poetry run test"
