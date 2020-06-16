@@ -29,6 +29,9 @@ function activate_conda_env --on-variable PWD
   end
 end
 
+# miniconda path
+set -gx PATH $PATH /opt/miniconda3/bin
+
 # autocompletion is slow in catalina
 function __fish_describe_command; end
 
