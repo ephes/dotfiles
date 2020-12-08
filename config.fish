@@ -59,6 +59,9 @@ set -gx FZF_DEFAULT_OPTS "--layout=reverse --inline-info"
 set -gx COMPOSE_DOCKER_CLI_BUILD 1
 set -gx DOCKER_BUILDKIT 1
 
+# rust
+set -gx PATH $HOME/.cargo/bin $PATH
+
 # aliases
 alias tests "poetry run test"
 alias pytests "poetry run pytest"
