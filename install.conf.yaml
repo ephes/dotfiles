@@ -23,6 +23,7 @@
     ~/.config/fish/functions/fish_user_key_bindings.fish: fish_user_key_bindings.fish
     ~/.config/fish/completions/poetry.fish: poetry.fish
     ~/.iterm2_shell_integration.fish: iterm2_shell_integration.fish
+    ~/.local/share/omf/init.fish: omf_init.fish
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
