@@ -41,6 +41,9 @@ set -gx PATH $PYENV_ROOT/bin $PATH
 status --is-interactive; and source (pyenv init -|psub)
 # status --is-interactive; and source (pyenv virtualenv-init -|psub)
 
+# virtualfish
+set -gx PROJECT_HOME $HOME/projects
+
 # enable framework for python via pyenv needed for you complete me
 set -gx PYTHON_CONFIGURE_OPTS "--enable-framework"
 
