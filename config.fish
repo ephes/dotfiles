@@ -36,10 +36,10 @@ function __fish_describe_command; end
 source ~/.iterm2_shell_integration.(basename $SHELL)
 
 # pyenv / pyenv-virtualenv
-set -gx PYENV_ROOT $HOME/.pyenv
-set -gx PATH $PYENV_ROOT/bin $PATH
-status --is-interactive; and source (pyenv init -|psub)
-# status --is-interactive; and source (pyenv virtualenv-init -|psub)
+set -Ux PYENV_ROOT $HOME/.pyenv
+set -U fish_user_paths $PYENV_ROOT/bin $fish_user_paths
+status is-login; and pyenv init --path | source
+pyenv init - | source
 
 # virtualfish
 set -gx PROJECT_HOME $HOME/projects
