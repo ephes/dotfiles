@@ -70,3 +70,6 @@ alias lint "poetry run lint"
 alias docs "poetry run docs"
 alias show_coverage "poetry run show_coverage"
 alias fvim "vim (fzf)"
+
+# nvm
+set -gx NVM_DIR $HOME/.nvm
