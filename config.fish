@@ -73,3 +73,6 @@ alias fvim "vim (fzf)"
 
 # nvm
 set -gx NVM_DIR $HOME/.nvm
+function nvm
+    bass source ~/.nvm/nvm.sh --no-use ';' nvm $argv
+end
