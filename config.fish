@@ -3,16 +3,19 @@ set PATH $PATH /Users/jochen/.local/bin
 
 # pipx completions
 # register-python-argcomplete --shell fish pipx | .
-set -g fish_user_paths "/usr/local/opt/icu4c/bin" $fish_user_paths
-set -g fish_user_paths "/usr/local/opt/icu4c/sbin" $fish_user_paths
+set -g fish_user_paths "/opt/homebrew/opt/icu4c/bin" $fish_user_paths
+set -g fish_user_paths "/opt/homebrew/opt/icu4c/sbin" $fish_user_paths
 
 # header files for gcc from apple command line tools
 set -x CPATH $CPATH (xcrun --show-sdk-path)/usr/include
 
 # enable compiling against homebrew openssl
-set -gx LDFLAGS "-L/usr/local/opt/openssl@1.1/lib"
-set -gx CPPFLAGS "-I/usr/local/opt/openssl@1.1/include"
-set -gx PKG_CONFIG_PATH "/usr/local/opt/openssl@1.1/lib/pkgconfig"
+set -gx LDFLAGS "-L/opt/homebrew/opt/openssl@1.1/lib"
+set -gx CPPFLAGS "-I/opt/homebrew/opt/openssl@1.1/include"
+set -gx PKG_CONFIG_PATH "/opt/homebrew/opt/openssl@1.1/lib/pkgconfig"
+
+# homebrew path
+fish_add_path /opt/homebrew/bin
 
 # on pwd change look for env file and load it
 function load_env --on-variable PWD
