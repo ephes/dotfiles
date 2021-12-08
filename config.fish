@@ -1,6 +1,9 @@
 # Created by `userpath` on 2019-11-27 06:20:04
 set PATH $PATH /Users/jochen/.local/bin
 
+# script userpath
+fish_add_path /Users/jochen/Library/Python/3.10/bin
+
 # pipx completions
 # register-python-argcomplete --shell fish pipx | .
 set -g fish_user_paths "/opt/homebrew/opt/icu4c/bin" $fish_user_paths
@@ -52,7 +55,7 @@ set -gx PYTHON_CONFIGURE_OPTS "--enable-framework"
 
 # git autocompletion issues https://github.com/pyenv/pyenv/issues/688
 # needs to be afte pyenv path modifications
-set -gx PATH /usr/local/opt/gettext/bin $PATH
+set -gx PATH /opt/homebrew/opt/gettext/bin/ $PATH
 
 # fzf
 set -gx FZF_DEFAULT_COMMAND "fd --type f"
