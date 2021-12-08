@@ -7,3 +7,5 @@
 	up = pull --rebase --autostash
 [core]
 	editor = /usr/local/bin/vim
+[init]
+	defaultBranch = main
