@@ -5,7 +5,22 @@
 	email = jochen@wersdoerfer.de
 [alias]
 	up = pull --rebase --autostash
+
 [core]
-	editor = /usr/local/bin/vim
+    pager = delta
+	editor = /opt/homebrew/bin/vim
+
 [init]
 	defaultBranch = main
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    navigate = true
+
+[merge]
+    conflictstyle = diff3
+
+[diff]
+    colorMoved = default
