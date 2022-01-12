@@ -1,5 +1,5 @@
 # pip install --user
-fish_add_path /Users/jochen/.local/bin
+fish_add_path {{ .chezmoi.homeDir }}/.local/bin
 
 # fzf
 set -gx FZF_DEFAULT_COMMAND "fd --type f"
