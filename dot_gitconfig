@@ -1,0 +1,26 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+	name = Jochen Wersdörfer
+	email = jochen@wersdoerfer.de
+[alias]
+	up = pull --rebase --autostash
+
+[core]
+    pager = delta
+	editor = /opt/homebrew/bin/vim
+
+[init]
+	defaultBranch = main
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    navigate = true
+
+[merge]
+    conflictstyle = diff3
+
+[diff]
+    colorMoved = default
