@@ -3,6 +3,8 @@ fish_add_path {{ .chezmoi.homeDir }}/.local/bin
 
 # pyenv
 set -gx PYENV_ROOT {{ .chezmoi.homeDir }}/.pyenv
+fish_add_path {{ .chezmoi.homeDir }}/.pyenv/bin
+fish_add_path {{ .chezmoi.homeDir }}/.pyenv/shims
 
 # fzf
 set -gx FZF_DEFAULT_COMMAND "fd --type f"
