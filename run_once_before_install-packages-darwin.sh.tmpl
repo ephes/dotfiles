@@ -1,0 +1,41 @@
+{{- if (eq .chezmoi.os "darwin") -}}
+#!/bin/bash
+
+{{ .brew_prefix }}/bin/brew bundle --no-lock --file=/dev/stdin <<EOF
+tap "homebrew/bundle"
+tap "homebrew/core"
+brew "asciinema"
+brew "bat"
+brew "chezmoi"
+brew "duf"
+brew "exa"
+brew "fd"
+brew "ffmpeg"
+brew "fish"
+brew "fzf"
+brew "git"
+brew "git-delta"
+brew "gource"
+brew "hexyl"
+brew "htop"
+brew "most"
+brew "multitail"
+brew "neofetch"
+brew "node"
+brew "ntopng"
+brew "openssl@3"
+brew "pandoc"
+brew "pwgen"
+brew "pyenv"
+brew "ripgrep"
+brew "sloccount"
+brew "slurm"
+brew "tig"
+brew "tldr"
+brew "tmux"
+brew "tree"
+brew "vim"
+brew "wget"
+EOF
+{{ end -}}
+
