@@ -14,6 +14,9 @@ set -gx PYENV_ROOT {{ .chezmoi.homeDir }}/.pyenv
 fish_add_path {{ .chezmoi.homeDir }}/.pyenv/bin
 fish_add_path {{ .chezmoi.homeDir }}/.pyenv/shims
 
+# pipx default python
+set -gx PIPX_DEFAULT_PYTHON {{ .chezmoi.homeDir }}/.pyenv/shims/python
+
 # fzf
 set -gx FZF_DEFAULT_COMMAND "fd --type f"
 set -gx FZF_DEFAULT_OPTS "--layout=reverse --inline-info"
