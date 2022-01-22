@@ -1,6 +1,9 @@
 # pip install --user
 fish_add_path {{ .chezmoi.homeDir }}/.local/bin
 
+# homebrew path
+fish_add_path {{ .brew_prefix }}/bin
+
 # pyenv
 set -gx PYENV_ROOT {{ .chezmoi.homeDir }}/.pyenv
 fish_add_path {{ .chezmoi.homeDir }}/.pyenv/bin
