@@ -4,6 +4,11 @@ fish_add_path {{ .chezmoi.homeDir }}/.local/bin
 # homebrew path
 fish_add_path {{ .brew_prefix }}/bin
 
+# enable compiling against homebrew openssl
+set -gx LDFLAGS "-L{{ .brew_prefix }}/opt/openssl@1.1/lib"
+set -gx CPPFLAGS "-I{{ .brew_prefix }}/opt/openssl@1.1/include"
+set -gx PKG_CONFIG_PATH "{{ .brew_prefix }}/opt/openssl@1.1/lib/pkgconfig"
+
 # pyenv
 set -gx PYENV_ROOT {{ .chezmoi.homeDir }}/.pyenv
 fish_add_path {{ .chezmoi.homeDir }}/.pyenv/bin
