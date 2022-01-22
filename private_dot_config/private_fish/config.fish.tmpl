@@ -1,5 +1,9 @@
 # pip install --user
+# Ok, packages installed with python -m pip install --user package
+# are installed into ~/Library/Python/3.10/bin/
+# so we have to add it to path, but its really really weird
 fish_add_path {{ .chezmoi.homeDir }}/.local/bin
+fish_add_path {{ .chezmoi.homeDir }}/Library/Python/3.10/bin/
 
 # homebrew path
 fish_add_path {{ .brew_prefix }}/bin
@@ -15,6 +19,9 @@ fish_add_path {{ .chezmoi.homeDir }}/.pyenv/bin
 fish_add_path {{ .chezmoi.homeDir }}/.pyenv/shims
 
 # pipx default python
+# python -m pip install --user pipx
+# pipx install ansible works when PIPX_DEFAULT_PYTHON is set
+# and ~/Library/Python/3.10/bin/ is in PATH otherwise it wont
 set -gx PIPX_DEFAULT_PYTHON {{ .chezmoi.homeDir }}/.pyenv/shims/python
 
 # fzf
