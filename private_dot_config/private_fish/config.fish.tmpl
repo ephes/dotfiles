@@ -18,11 +18,14 @@ set -gx PYENV_ROOT {{ .chezmoi.homeDir }}/.pyenv
 fish_add_path {{ .chezmoi.homeDir }}/.pyenv/bin
 fish_add_path {{ .chezmoi.homeDir }}/.pyenv/shims
 
+# python launcher for unix
+set -gx PY_PYTHON (pyenv exec python -c "import sys; print('.'.join(map(str, sys.version_info[:2])))")
+
 # pipx default python
 # python -m pip install --user pipx
 # pipx install ansible works when PIPX_DEFAULT_PYTHON is set
 # and ~/Library/Python/3.10/bin/ is in PATH otherwise it wont
-set -gx PIPX_DEFAULT_PYTHON {{ .chezmoi.homeDir }}/.pyenv/shims/python
+# set -gx PIPX_DEFAULT_PYTHON {{ .chezmoi.homeDir }}/.pyenv/shims/python
 
 # fzf
 set -gx FZF_DEFAULT_COMMAND "fd --type f"
