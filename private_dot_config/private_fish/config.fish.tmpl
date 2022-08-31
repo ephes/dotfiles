@@ -33,6 +33,7 @@ set -gx FZF_DEFAULT_OPTS "--layout=reverse --inline-info"
 
 # virtualfish
 set -gx PROJECT_HOME {{ .chezmoi.homeDir }}/projects
+set -gx VIRTUALFISH_DEFAULT_PYTHON {{ .chezmoi.homeDir }}/.pyenv/shims/python
 
 # zoxide
 zoxide init fish | source
