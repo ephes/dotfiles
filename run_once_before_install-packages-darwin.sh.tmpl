@@ -1,4 +1,4 @@
-{{- if (eq .chezmoi.os "darwin") -}}
+{{- if (eq .chezmoi.os "darwin1") -}}
 #!/bin/bash
 
 {{ .brew_prefix }}/bin/brew bundle --no-lock --file=/dev/stdin <<EOF
