@@ -101,7 +101,7 @@ let g:black_virtualenv = "~/.virtualenvs/black"
 nnoremap <F9> :Black<CR>
 
 " youcompleteme
-let g:ycm_python_binary_path = '{{ .brew_prefix }}/bin/python3'
+let g:ycm_python_binary_path = '~/.pyenv/shims/python'
 set encoding=utf-8
 
 " deoplete
