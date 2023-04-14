@@ -41,7 +41,7 @@ Plugin 'Valloric/YouCompleteMe'
 "Plugin 'shougo/deoplete.nvim'
 
 " black
-" Plugin 'psf/black'
+Plugin 'psf/black'
 
 " make vim indent only 4 spaces instead of 8
 " Plugin 'Vimjas/vim-python-pep8-indent'
