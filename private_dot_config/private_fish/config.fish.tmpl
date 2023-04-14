@@ -38,6 +38,9 @@ set -gx VIRTUALFISH_DEFAULT_PYTHON {{ .chezmoi.homeDir }}/.pyenv/shims/python
 # zoxide
 zoxide init fish | source
 
+# add pycharm command to PATH
+fish_add_path /Applications/PyCharm.app/Contents/MacOS
+
 # aliases
 alias fvim "vim (fzf)"
 alias pcy "python commands.py"
