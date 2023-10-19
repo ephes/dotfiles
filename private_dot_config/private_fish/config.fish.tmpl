@@ -60,12 +60,12 @@ alias ltr='exa -lag -scr'
 fish_add_path {{ .chezmoi.homeDir }}/.cargo/bin
 
 # miniconda
-if test -f {{ .chezmoi.homeDir }}/.pyenv/versions/miniconda3-latest/bin/conda
-    eval {{ .chezmoi.homeDir }}/.pyenv/versions/miniconda3-latest/bin/conda "shell.fish" "hook" $argv | source
-else
-    if test -f "{{ .chezmoi.homeDir }}/.pyenv/versions/miniconda3-latest/etc/fish/conf.d/conda.fish"
-        . "{{ .chezmoi.homeDir }}/.pyenv/versions/miniconda3-latest/etc/fish/conf.d/conda.fish"
-    else
-        set -x PATH "{{ .chezmoi.homeDir }}/.pyenv/versions/miniconda3-latest/bin" $PATH
-    end
-end
+#if test -f {{ .chezmoi.homeDir }}/.pyenv/versions/miniconda3-latest/bin/conda
+#    eval {{ .chezmoi.homeDir }}/.pyenv/versions/miniconda3-latest/bin/conda "shell.fish" "hook" $argv | source
+#else
+#    if test -f "{{ .chezmoi.homeDir }}/.pyenv/versions/miniconda3-latest/etc/fish/conf.d/conda.fish"
+#        . "{{ .chezmoi.homeDir }}/.pyenv/versions/miniconda3-latest/etc/fish/conf.d/conda.fish"
+#    else
+#        set -x PATH "{{ .chezmoi.homeDir }}/.pyenv/versions/miniconda3-latest/bin" $PATH
+#    end
+#end
