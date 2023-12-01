@@ -39,7 +39,7 @@ set -gx VIRTUALFISH_DEFAULT_PYTHON {{ .chezmoi.homeDir }}/.pyenv/shims/python
 zoxide init fish | source
 
 # postgres
-fish_add_path {{ .brew_prefix }}/Cellar/postgresql@15/15.5/bin
+fish_add_path {{ .brew_prefix }}/Cellar/postgresql@15/15.5_1/bin
 fish_add_path {{ .brew_prefix }}/Cellar/postgresql@16/16.1/bin
 
 # add pycharm command to PATH
