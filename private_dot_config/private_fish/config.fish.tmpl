@@ -70,3 +70,6 @@ fish_add_path {{ .chezmoi.homeDir }}/.cargo/bin
 #        set -x PATH "{{ .chezmoi.homeDir }}/.pyenv/versions/miniconda3-latest/bin" $PATH
 #    end
 #end
+
+# direnv
+direnv hook fish | source
