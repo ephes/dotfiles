@@ -41,7 +41,7 @@ set -gx VIRTUALFISH_DEFAULT_PYTHON {{ .chezmoi.homeDir }}/.pyenv/shims/python
 zoxide init fish | source
 
 # postgres
-fish_add_path {{ .brew_prefix }}/opt/postgresql@16/bin
+fish_add_path {{ .brew_prefix }}/opt/postgresql@17/bin
 
 # ruby
 fish_add_path {{ .brew_prefix }}/opt/ruby/bin
