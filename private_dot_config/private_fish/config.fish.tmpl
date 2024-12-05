@@ -83,3 +83,15 @@ starship init fish | source
 
 # jupyter
 set -gx JUPYTER_PLATFORM_DIRS 1
+
+# try to activate virtualenv in .venv when entering a directory
+function enter_a_dir
+    if test -f "$PWD/.venv/bin/activate.fish"
+        source "$PWD/.venv/bin/activate.fish"
+    end
+end
+
+function on_directory_change --on-variable PWD
+    enter_a_dir
+end
+
