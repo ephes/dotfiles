@@ -1,6 +1,7 @@
 tap "homebrew/bundle"
 brew "asciinema"
 brew "bat"
+brew "bfg"
 brew "chezmoi"
 brew "composer"
 brew "coreutils"
