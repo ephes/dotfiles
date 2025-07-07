@@ -1,9 +1,6 @@
 # pip install --user
 # Ok, packages installed with python -m pip install --user package
-# are installed into ~/Library/Python/3.10/bin/
-# so we have to add it to path, but its really really weird
 fish_add_path {{ .chezmoi.homeDir }}/.local/bin
-fish_add_path {{ .chezmoi.homeDir }}/Library/Python/3.10/bin/
 
 # homebrew path
 fish_add_path {{ .brew_prefix }}/bin
@@ -13,11 +10,6 @@ set -gx LDFLAGS "-L{{ .brew_prefix }}/opt/openssl@3/lib"
 set -gx CPPFLAGS "-I{{ .brew_prefix }}/opt/openssl@3/include"
 set -gx PKG_CONFIG_PATH "{{ .brew_prefix }}/opt/openssl@3/lib/pkgconfig"
 
-# pyenv
-set -gx PYENV_ROOT {{ .chezmoi.homeDir }}/.pyenv
-fish_add_path {{ .chezmoi.homeDir }}/.pyenv/bin
-fish_add_path {{ .chezmoi.homeDir }}/.pyenv/shims
-
 # python launcher for unix
 set -gx PY_PYTHON (pyenv exec python -c "import sys; print('.'.join(map(str, sys.version_info[:2])))")
 
@@ -25,17 +17,13 @@ set -gx PY_PYTHON (pyenv exec python -c "import sys; print('.'.join(map(str, sys
 # python -m pip install --user pipx
 # pipx install ansible works when PIPX_DEFAULT_PYTHON is set
 # and ~/Library/Python/3.10/bin/ is in PATH otherwise it wont
-set -gx PIPX_DEFAULT_PYTHON {{ .chezmoi.homeDir }}/.pyenv/shims/python
+set -gx PIPX_DEFAULT_PYTHON {{ .brew_prefix }}/bin/python3.13
 # pipx home ir in library application breaks a lot of stuff
 set -gx PIPX_HOME {{ .chezmoi.homeDir }}/.local/pipx
 
 # fzf
 set -gx FZF_DEFAULT_COMMAND "fd --type f"
 set -gx FZF_DEFAULT_OPTS "--layout=reverse --inline-info"
-
-# virtualfish
-set -gx PROJECT_HOME {{ .chezmoi.homeDir }}/projects
-set -gx VIRTUALFISH_DEFAULT_PYTHON {{ .chezmoi.homeDir }}/.pyenv/shims/python
 
 # zoxide
 zoxide init fish | source
@@ -63,17 +51,6 @@ alias ltr='eza -lag -scr'
 
 # rust
 fish_add_path {{ .chezmoi.homeDir }}/.cargo/bin
-
-# miniconda
-#if test -f {{ .chezmoi.homeDir }}/.pyenv/versions/miniconda3-latest/bin/conda
-#    eval {{ .chezmoi.homeDir }}/.pyenv/versions/miniconda3-latest/bin/conda "shell.fish" "hook" $argv | source
-#else
-#    if test -f "{{ .chezmoi.homeDir }}/.pyenv/versions/miniconda3-latest/etc/fish/conf.d/conda.fish"
-#        . "{{ .chezmoi.homeDir }}/.pyenv/versions/miniconda3-latest/etc/fish/conf.d/conda.fish"
-#    else
-#        set -x PATH "{{ .chezmoi.homeDir }}/.pyenv/versions/miniconda3-latest/bin" $PATH
-#    end
-#end
 
 # direnv
 direnv hook fish | source
