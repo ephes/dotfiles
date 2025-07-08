@@ -80,3 +80,33 @@ alias claude="/Users/jochen/.claude/local/claude"
 
 # uv
 set -gx UV_PYTHON_PREFERENCE only-managed
+
+
+# ssh agent forwarding
+if status is-interactive
+    # Only run in tmux sessions
+    if set -q TMUX
+        # Function to update SSH agent socket from tmux environment
+        function __update_ssh_auth_sock
+            set -l sock (tmux showenv SSH_AUTH_SOCK 2>/dev/null | string split = | tail -1)
+            if test -n "$sock" -a "$sock" != "-SSH_AUTH_SOCK" -a "$sock" != "$SSH_AUTH_SOCK"
+                set -gx SSH_AUTH_SOCK $sock
+            end
+        end
+        
+        # Update immediately when shell starts (fixes new panes/windows)
+        __update_ssh_auth_sock
+        
+        # Update before each command (fixes existing shells after reattach)
+        function __ssh_agent_preexec --on-event fish_preexec
+            __update_ssh_auth_sock
+        end
+        
+        # Alternative: Update on each prompt (more reliable but slightly less efficient)
+        # Uncomment this if the preexec version doesn't work reliably
+        # function __ssh_agent_prompt --on-event fish_prompt
+        #     __update_ssh_auth_sock
+        # end
+    end
+end
+
