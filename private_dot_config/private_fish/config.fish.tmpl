@@ -11,7 +11,7 @@ set -gx CPPFLAGS "-I{{ .brew_prefix }}/opt/openssl@3/include"
 set -gx PKG_CONFIG_PATH "{{ .brew_prefix }}/opt/openssl@3/lib/pkgconfig"
 
 # python launcher for unix
-set -gx PY_PYTHON (pyenv exec python -c "import sys; print('.'.join(map(str, sys.version_info[:2])))")
+set -gx PY_PYTHON (uvx python -c "import sys; print('.'.join(map(str, sys.version_info[:2])))")
 
 # pipx default python
 # python -m pip install --user pipx
