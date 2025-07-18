@@ -32,9 +32,6 @@ Plugin 'davidhalter/jedi-vim'
 " supertab
 Plugin 'ervandew/supertab'
 
-" YouCompleteMe
-Plugin 'Valloric/YouCompleteMe'
-
 " deoplete
 "Plugin 'roxma/vim-hug-neovim-rpc'
 "Plugin 'roxma/nvim-yarp'
