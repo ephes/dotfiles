@@ -1,1 +1,1 @@
-Just print out a short commit message and do not try to commit by yourself. Please keep it brief.
+Please commit your changes without referring to yourself in the commit message and prefix your commit message with #$ARGUMENTS 
