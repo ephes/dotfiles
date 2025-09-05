@@ -1,3 +1,4 @@
+brew "age"
 brew "asciinema"
 brew "bat"
 brew "bfg"
