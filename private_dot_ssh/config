@@ -1,0 +1,12 @@
+ServerAliveInterval 300
+
+host homepage
+    hostname wersdoerfer.de
+    ForwardAgent yes
+    User homepage
+
+host python-podcast
+    hostname wersdoerfer.de
+    ForwardAgent yes
+    User python-podcast
+
