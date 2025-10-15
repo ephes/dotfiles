@@ -1,5 +1,6 @@
 brew "age"
 brew "asciinema"
+brew "ast-grep"
 brew "bat"
 brew "bfg"
 brew "chezmoi"
