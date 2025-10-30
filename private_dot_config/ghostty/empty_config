@@ -5,3 +5,6 @@ keybind = alt+left=previous_tab
 # font type and size
 font-family = "MonoLisa"
 font-size = 18
+
+# umlauts
+macos-option-as-alt = false
