@@ -10,3 +10,10 @@ host python-podcast
     ForwardAgent yes
     User python-podcast
 
+host macmini-unlock
+    hostname 192.168.178.94
+    User root
+    Port 2222
+    IdentityFile ~/.ssh/unlock-macmini
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
