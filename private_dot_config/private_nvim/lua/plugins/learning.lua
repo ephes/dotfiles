@@ -3,6 +3,7 @@ return {
   -- Hardtime: break bad habits, build good ones
   {
     "m4xshen/hardtime.nvim",
+    enabled = false, -- Disabled for now; enable when ready to practice Vim motions
     dependencies = { "MunifTanjim/nui.nvim", "nvim-lua/plenary.nvim" },
     opts = {
       -- Start with gentle hints, not blocking
