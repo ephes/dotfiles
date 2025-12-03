@@ -1,0 +1,32 @@
+{{- if eq .chezmoi.os "darwin" -}}
+#!/bin/bash
+# Setup Neovim Python host with uv
+# Runs on every chezmoi apply to ensure host is healthy
+
+set -e
+
+NVIM_PYTHON_DIR="$HOME/.local/share/nvim/python"
+PYTHON_VERSION="3.12"
+
+# Check for uv
+if ! command -v uv &> /dev/null; then
+    echo "Warning: uv not found. Skipping Neovim Python host setup."
+    echo "Install uv first: curl -LsSf https://astral.sh/uv/install.sh | sh"
+    exit 0
+fi
+
+# Create venv if missing
+if [ ! -d "$NVIM_PYTHON_DIR" ] || [ ! -x "$NVIM_PYTHON_DIR/bin/python" ]; then
+    echo "Creating Neovim Python host with uv..."
+    uv venv "$NVIM_PYTHON_DIR" --python "$PYTHON_VERSION" 2>/dev/null || {
+        echo "Warning: Python $PYTHON_VERSION not available. Installing..."
+        uv python install "$PYTHON_VERSION"
+        uv venv "$NVIM_PYTHON_DIR" --python "$PYTHON_VERSION"
+    }
+fi
+
+# Always ensure pynvim is installed (idempotent)
+uv pip install --python "$NVIM_PYTHON_DIR/bin/python" --quiet pynvim
+
+echo "Neovim Python host ready at $NVIM_PYTHON_DIR"
+{{ end -}}
