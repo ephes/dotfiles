@@ -1,16 +1,15 @@
 -- LSP configuration
--- Note: LSP servers are auto-installed by lazyvim.plugins.extras.lang.* imports in lazy.lua
--- This file is for additional LSP customization if needed
+-- Note: Most LSP servers are auto-installed by lazyvim.plugins.extras.lang.* imports
+-- This file adds servers not covered by those extras
 
 return {
-  -- Add any LSP overrides here
-  -- Example: disable a specific server
-  -- {
-  --   "neovim/nvim-lspconfig",
-  --   opts = {
-  --     servers = {
-  --       some_server = { enabled = false },
-  --     },
-  --   },
-  -- },
+  -- Ensure taplo (TOML) is installed since there's no lang.toml extra
+  {
+    "mason-org/mason.nvim",
+    opts = {
+      ensure_installed = {
+        "taplo", -- TOML LSP
+      },
+    },
+  },
 }

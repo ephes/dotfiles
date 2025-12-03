@@ -28,7 +28,7 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.lang.rust" },
     { import = "lazyvim.plugins.extras.lang.json" },
     { import = "lazyvim.plugins.extras.lang.yaml" },
-    { import = "lazyvim.plugins.extras.lang.toml" },
+    -- Note: No lang.toml extra exists; TOML support via taplo LSP (auto-installed by Mason)
 
     -- Import your custom plugins
     { import = "plugins" },
