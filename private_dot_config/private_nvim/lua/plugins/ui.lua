@@ -1,5 +1,20 @@
 -- UI customizations
 return {
+  -- Customize the dashboard (remove LazyVim branding)
+  {
+    "folke/snacks.nvim",
+    opts = {
+      dashboard = {
+        preset = {
+          header = [[
+
+N E O V I M
+]],
+        },
+      },
+    },
+  },
+
   -- Neo-tree: show hidden files by default
   {
     "nvim-neo-tree/neo-tree.nvim",
