@@ -3,6 +3,9 @@
 
 local opt = vim.opt
 
+-- Fix "No such group: FileExplorer" error (netrw disabled by LazyVim)
+vim.api.nvim_create_augroup("FileExplorer", { clear = true })
+
 -- Python host (uv-managed venv with pynvim)
 vim.g.python3_host_prog = vim.fn.expand("~/.local/share/nvim/python/bin/python")
 
