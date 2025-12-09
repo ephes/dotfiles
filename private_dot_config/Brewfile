@@ -1,4 +1,7 @@
+tap "steveyegge/beads"
+
 brew "age"
+brew "beads"
 brew "asciinema"
 brew "ast-grep"
 brew "bat"
