@@ -17,3 +17,11 @@ host macmini-unlock
     IdentityFile ~/.ssh/unlock-macmini
     StrictHostKeyChecking no
     UserKnownHostsFile /dev/null
+
+host fractal-unlock
+    hostname 192.168.178.116
+    User root
+    Port 2222
+    IdentityFile ~/.ssh/unlock-macmini
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
