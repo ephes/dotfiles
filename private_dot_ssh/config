@@ -25,3 +25,10 @@ host fractal-unlock
     IdentityFile ~/.ssh/unlock-macmini
     StrictHostKeyChecking no
     UserKnownHostsFile /dev/null
+
+host code.egenix.com
+    hostname code.egenix.com
+    User git
+    Port 2242
+    IdentityFile ~/.ssh/egenix_gitlab
+    IdentitiesOnly yes
