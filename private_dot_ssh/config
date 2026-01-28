@@ -1,4 +1,5 @@
 ServerAliveInterval 300
+Include ~/.ssh/config.private
 
 host homepage
     hostname wersdoerfer.de
@@ -31,11 +32,4 @@ host code.egenix.com
     User git
     Port 2242
     IdentityFile ~/.ssh/egenix_gitlab
-    IdentitiesOnly yes
-
-host git.coreso.eu
-    hostname git.coreso.eu
-    User git
-    ProxyJump root@staging.wersdoerfer.de
-    IdentityFile ~/.ssh/coreso
     IdentitiesOnly yes
