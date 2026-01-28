@@ -37,3 +37,5 @@ host git.coreso.eu
     hostname git.coreso.eu
     User git
     ProxyJump root@staging.wersdoerfer.de
+    IdentityFile ~/.ssh/coreso
+    IdentitiesOnly yes
