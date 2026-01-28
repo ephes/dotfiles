@@ -32,3 +32,8 @@ host code.egenix.com
     Port 2242
     IdentityFile ~/.ssh/egenix_gitlab
     IdentitiesOnly yes
+
+host git.coreso.eu
+    hostname git.coreso.eu
+    User git
+    ProxyJump root@staging.wersdoerfer.de
